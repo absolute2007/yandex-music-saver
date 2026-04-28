@@ -4,6 +4,11 @@ namespace YandexMusicSaver
 {
     public partial class App : Application
     {
+        static App()
+        {
+            Environment.SetEnvironmentVariable("MICROSOFT_WINDOWSAPPRUNTIME_BASE_DIRECTORY", AppContext.BaseDirectory);
+        }
+
         private MainWindow? m_window;
 
         public App()
