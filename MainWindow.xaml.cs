@@ -15,6 +15,7 @@ using System.Linq;
 using Microsoft.UI.Composition;
 using Microsoft.Graphics.Canvas.Effects;
 using Windows.Graphics.Effects;
+using Microsoft.UI.Windowing;
 
 namespace YandexMusicSaver;
 
@@ -64,6 +65,9 @@ public sealed partial class MainWindow : Window
         BackgroundCover.Loaded += (_, _) => EnsureCoverContainer();
 
         var hwnd = WinRT.Interop.WindowNative.GetWindowHandle(this);
+        var windowId = Microsoft.UI.Win32Interop.GetWindowIdFromWindow(hwnd);
+        AppWindow.GetFromWindowId(windowId).SetIcon("Assets\\AppIcon.ico");
+
         _wndProcDelegate = CustomWndProc;
         _oldWndProc = SetWindowLongPtr(hwnd, GWLP_WNDPROC, _wndProcDelegate);
 

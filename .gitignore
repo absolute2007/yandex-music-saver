@@ -1,7 +1,11 @@
 bin/
 obj/
 publish/
+release-app/
+release-debug/
+launcher-build/
 *.zip
+YandexMusicSaver.exe
 *.log
 *.tmp
 *.user
