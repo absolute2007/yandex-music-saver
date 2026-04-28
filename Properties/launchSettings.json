@@ -1,0 +1,10 @@
+{
+  "profiles": {
+    "YandexMusicSaver (Package)": {
+      "commandName": "MsixPackage"
+    },
+    "YandexMusicSaver (Unpackaged)": {
+      "commandName": "Project"
+    }
+  }
+}

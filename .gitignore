@@ -1,0 +1,16 @@
+bin/
+obj/
+publish/
+*.zip
+*.log
+*.tmp
+*.user
+*.suo
+*.cache
+
+api.json
+handler.json
+out.html
+playlist.html
+playlist_utf8.html
+extract.py
